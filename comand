@@ -12,8 +12,9 @@ python manage.py migrate
 
 python manage.py test store.tests
 
-coverage run --source='_' python manage.py test store.tests
- coverage report
+coverage run --source='.' ./manage.py test store.tests
+coverage report
+coverage html
 
 http://127.0.0.1:8000/book/?debug-toolbar
 
