@@ -86,6 +86,5 @@ class BookSerializerTestCase(TestCase):
                 ]
             },
         ]
-        print(expected_data)
-        print(data)
+
         self.assertEqual(expected_data, data)
