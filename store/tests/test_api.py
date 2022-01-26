@@ -14,7 +14,7 @@ from store.serializers import BooksSerializer
 
 
 class BooksApiTestCase(APITestCase):
-    def setUp(self):
+    def setUp(self):    #запускается перед каждым тестом
         self.user = User.objects.create(username='test_username')
         self.book_1 = Book.objects.create(name='Test book 1', price=25,
                                           author_name='Author 1',

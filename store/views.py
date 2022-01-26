@@ -16,11 +16,11 @@ class BookViewSet(ModelViewSet):
         annotated_likes=Count(Case(When(userbookrelation__like=True, then=1)))
     ).select_related('owner').prefetch_related('readers').order_by('id')
     serializer_class = BooksSerializer
-    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]   #фильтры и сортировка
     permission_classes = [IsOwnerOrStaffOrReadOnly]
-    filter_fields = ['price']
-    search_fields = ['name', 'author_name']
-    ordering_fields = ['price', 'author_name']
+    filter_fields = ['price']   #Фильтр
+    search_fields = ['name', 'author_name']   ##Фильтр
+    ordering_fields = ['price', 'author_name']   #сортировка
 
     def perform_create(self, serializer):
         serializer.validated_data['owner'] = self.request.user

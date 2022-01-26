@@ -15,7 +15,7 @@ class Book(models.Model):
     rating = models.DecimalField(max_digits=3, decimal_places=2, default=None, null=True)
 
     def __str__(self):
-        return f'{self.id}: {self.name}'
+        return f'{self.id}: {self.name}'  #в админке создает красивый интерфейс 
 
 
 class UserBookRelation(models.Model):
