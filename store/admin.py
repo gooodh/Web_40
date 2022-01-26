@@ -8,8 +8,7 @@ from store.models import Book, UserBookRelation
 class BookAmin(ModelAdmin):
     pass
 
+
 @admin.register(UserBookRelation)
 class UserBookRelationAdmin(ModelAdmin):
     pass
-
-UserBookRelation

@@ -1,0 +1,37 @@
+django-admin startproject project
+python manage.py createsuperuser
+python manage.py startapp orders
+
+
+
+python manage.py runserver
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py test store.tests
+
+coverage run --source='_' python manage.py test store.tests
+ coverage report
+
+http://127.0.0.1:8000/book/?debug-toolbar
+
+Postman
+
+
+q6uKqyvw_0801
+
+python -m pip install django-debug-toolbar
+
+pip install django-debug-toolbar-force
+
+pip freeze > requirements.txt
+pip install -r  requirements.txt
+
+
+ctrl+d дубляж строки
+ctrl+y удалить строку
+shift+f6 переименовать переменную
+ctrl+ alt+ t отфарматировать блок
+alt+ enter импорт
